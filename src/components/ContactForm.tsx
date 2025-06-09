@@ -54,7 +54,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ prefilledRole }) => {
       const emailData = {
         from_name: formData.fullName,
         email: formData.email,
-        subject: 'Staff Augmentation Request' + formData.companyName,
+        subject: 'Staff Augmentation Request ' + formData.companyName,
         'Company Name': formData.companyName,
         'Role needed': formData.roleNeeded,
         'Recruitment timeline': formData.timeline,
