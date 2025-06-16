@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Hexagon } from 'lucide-react';
 import ScrollToSection from './ScrollToSection';
+import TrackedSection from './TrackedSection';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center bg-gradient-to-br from-white via-blue-50 to-blue-100 pt-16">
+    <TrackedSection id="hero" className="min-h-screen flex items-center bg-gradient-to-br from-white via-blue-50 to-blue-100 pt-16">
       <div className="container-section">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <motion.div 
@@ -113,7 +114,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </TrackedSection>
   );
 };
 

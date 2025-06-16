@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Wand2 } from 'lucide-react';
 import { ReactTyped } from 'react-typed';
 import { useNavigate } from 'react-router-dom';
+import TrackedSection from './TrackedSection';
 
 interface ContactFormProps {
   prefilledRole?: string;
@@ -31,7 +32,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ prefilledRole }) => {
   }, [prefilledRole]);
   
   const [isGenerating, setIsGenerating] = useState(false);
-  const [isGenerationComplete, setIsGenerationComplete] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -78,7 +78,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ prefilledRole }) => {
   
   const generateProjectDescription = () => {
     setIsGenerating(true);
-    setIsGenerationComplete(false);
     
     // Array of 10 different project descriptions
     const projectDescriptions = [
@@ -104,7 +103,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ prefilledRole }) => {
   const [selectedDescription, setSelectedDescription] = useState('');
 
   return (
-    <section className="bg-white">
+    <TrackedSection id="contact" className="bg-white">
       <div className="container-section">
         <h2 className="section-heading" id="contact">Let's get started</h2>
         <p className="section-subheading">
@@ -249,7 +248,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ prefilledRole }) => {
                         notes: selectedDescription
                       }));
                       setIsGenerating(false);
-                      setIsGenerationComplete(true);
                     }}
                   />
                 </div>
@@ -278,7 +276,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ prefilledRole }) => {
           </form>
         </motion.div>
       </div>
-    </section>
+    </TrackedSection>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { UserSearch, Users, X, Check } from 'lucide-react';
 import ScrollToSection from './ScrollToSection';
+import TrackedSection from './TrackedSection';
 
 interface ServiceModalData {
   title: string;
@@ -110,7 +111,7 @@ const Services: React.FC = () => {
 
   return (
     <>
-      <section id="services" className="bg-gray-50">
+      <TrackedSection id="services" className="bg-gray-50">
         <div className="container-section">
           <h2 className="section-heading">Flexible hiring options</h2>
           <p className="section-subheading">
@@ -169,7 +170,7 @@ const Services: React.FC = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </TrackedSection>
 
       {/* Modal */}
       <AnimatePresence>

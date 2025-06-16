@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, Search, Users, Check } from 'lucide-react';
+import TrackedSection from './TrackedSection';
 
 const HowItWorks: React.FC = () => {
   const steps = [
@@ -46,7 +47,7 @@ const HowItWorks: React.FC = () => {
   };
 
   return (
-    <section id="how-it-works" className="bg-white">
+    <TrackedSection id="how-it-works" className="bg-white">
       <div className="container-section">
         <h2 className="section-heading">How our hiring process works</h2>
         
@@ -81,7 +82,7 @@ const HowItWorks: React.FC = () => {
           ))}
         </motion.div>
       </div>
-    </section>
+    </TrackedSection>
   );
 };
 

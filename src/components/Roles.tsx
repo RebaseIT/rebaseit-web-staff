@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Layers, Server, Palette, Database, LineChart } from 'lucide-react';
 import ScrollToSection from './ScrollToSection';
+import TrackedSection from './TrackedSection';
 
 interface RolesProps {
   onRoleSelect?: (role: string) => void;
@@ -73,7 +74,7 @@ const Roles: React.FC<RolesProps> = ({ onRoleSelect }) => {
   };
 
   return (
-    <section id="roles" className="bg-white">
+    <TrackedSection id="roles" className="bg-white">
       <div className="container-section">
         <h2 className="section-heading">We help you hire for</h2>
         <p className="section-subheading">
@@ -121,7 +122,7 @@ const Roles: React.FC<RolesProps> = ({ onRoleSelect }) => {
           ))}
         </motion.div>
       </div>
-    </section>
+    </TrackedSection>
   );
 };
 

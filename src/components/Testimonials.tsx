@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import TrackedSection from './TrackedSection';
 
 const AUTOPLAY_DELAY = 5000; // 5 seconds between transitions
 
@@ -60,7 +61,7 @@ const Testimonials: React.FC = () => {
   };
 
   return (
-    <section id="testimonials" className="bg-gray-50">
+    <TrackedSection id="testimonials" className="bg-gray-50">
       <div className="container-section">
         <h2 className="section-heading">What our clients say</h2>
         
@@ -126,7 +127,7 @@ const Testimonials: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </TrackedSection>
   );
 };
 
