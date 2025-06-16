@@ -20,8 +20,7 @@ export const useSectionTracking = (sectionId: string) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Track section view as a page view with a custom URL
-            window.umami?.track(`/sections/${sectionId}`, window.location.href);
+            window.umami?.track(`/sections/${sectionId}`);
           }
         });
       },
