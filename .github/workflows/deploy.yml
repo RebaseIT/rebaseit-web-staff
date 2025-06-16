@@ -37,7 +37,7 @@ jobs:
         run: npm run build
         env:
           VITE_WEB3FORMS_KEY: ${{ secrets.VITE_WEB3FORMS_KEY }}
-          VITE_UMAMI_SITE_ID: ${{ env.VITE_UMAMI_SITE_ID }}
+          VITE_UMAMI_SITE_ID: ${{ secrets.VITE_UMAMI_SITE_ID }}
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
